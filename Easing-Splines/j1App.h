@@ -16,7 +16,7 @@ class j1Render;
 class j1Textures;
 class j1Map;
 class j1Scene;
-
+class EasingSplines;
 
 
 class j1App
@@ -91,6 +91,7 @@ public:
 	j1Textures*			tex;
 	j1Map*				map;
 	j1Scene*			scene;
+	EasingSplines*		easing_splines;
 
 private:
 

@@ -1,5 +1,5 @@
-#ifndef __j1SCENE_H__
-#define __j1SCENE_H__
+#ifndef __EASINGSPLINES_H__
+#define __EASINGSPLINES_H__
 
 #include "j1Module.h"
 #include <list>
@@ -8,14 +8,14 @@ struct SDL_Texture;
 struct SDL_Rect;
 
 
-class j1Scene : public j1Module
+class EasingSplines : public j1Module
 {
 public:
 
-	j1Scene();
+	EasingSplines();
 
 	// Destructor
-	virtual ~j1Scene();
+	virtual ~EasingSplines();
 
 	// Called before render is available
 	bool Awake();
@@ -35,16 +35,11 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void Try(int *x, int* y);
+
 
 public:
-	int* X;
-	int* Y;
 
-	std::pair<int*, int*> cord;
 
-	std::list<std::pair<int*, int*>> cord_to_move;
-	
 };
 
-#endif // __j1SCENE_H__
+#endif

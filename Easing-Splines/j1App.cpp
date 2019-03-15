@@ -13,6 +13,7 @@
 #include "j1App.h"
 #include "j1Scene.h"
 #include "j1Map.h"
+#include "EasingSplines.h"
 #include "p2Point.h"
 
 // Constructor
@@ -26,6 +27,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	tex = new j1Textures();
 	map = new j1Map();
 	scene = new j1Scene();
+	easing_splines = new EasingSplines();
 
 
 	// Ordered for awake / Start / Update
@@ -35,7 +37,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(tex);
 	AddModule(map);
 	AddModule(scene);
-
+	AddModule(easing_splines);
 	// render last to swap buffer
 	AddModule(render);
 

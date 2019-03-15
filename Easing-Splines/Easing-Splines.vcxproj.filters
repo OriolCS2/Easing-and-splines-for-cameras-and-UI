@@ -31,6 +31,9 @@
     <ClCompile Include="j1Timer.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
+    <ClCompile Include="EasingSplines.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="j1Scene.h" />
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="j1Timer.h">
       <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="EasingSplines.h">
+      <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
