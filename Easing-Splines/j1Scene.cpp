@@ -55,25 +55,37 @@ bool j1Scene::Update(float dt)
 
 	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT) {
 		//*Y += 300 * dt;
-		*cord.second += 300 * dt;
+		//*cord.second += 300 * dt;
+		for (std::list<std::pair<int*, int*>>::iterator item = cord_to_move.begin(); item != cord_to_move.end(); ++item) {
+			*item->second += 300 * dt;
+		}
 	}
 		
 
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) {
 		//*Y -= 300 * dt;
-		*cord.second -= 300 * dt;
+		//*cord.second -= 300 * dt;
+		for (std::list<std::pair<int*, int*>>::iterator item = cord_to_move.begin(); item != cord_to_move.end(); ++item) {
+			*item->second -= 300 * dt;
+		}
 	}
 		
 
 	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT) {
 		//*X += 300 * dt;
-		*cord.first += 300 * dt;
+		//*cord.first += 300 * dt;
+		for (std::list<std::pair<int*, int*>>::iterator item = cord_to_move.begin(); item != cord_to_move.end(); ++item) {
+			*item->first += 300 * dt;
+		}
 	}
 		
 
 	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT) {
 		//*X -= 300 * dt;
-		*cord.first -= 300 * dt;
+		//*cord.first -= 300 * dt;
+		for (std::list<std::pair<int*, int*>>::iterator item = cord_to_move.begin(); item != cord_to_move.end(); ++item) {
+			*item->first -= 300 * dt;
+		}
 	}
 		
 
@@ -114,4 +126,6 @@ void j1Scene::Try(int *x, int* y)
 
 	cord.first = x;
 	cord.second = y;
+
+	cord_to_move.push_back(cord);
 }

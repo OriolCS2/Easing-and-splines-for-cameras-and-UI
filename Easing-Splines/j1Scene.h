@@ -41,6 +41,8 @@ public:
 	int* Y;
 
 	std::pair<int*, int*> cord;
+
+	std::list<std::pair<int*, int*>> cord_to_move;
 	
 };
 
