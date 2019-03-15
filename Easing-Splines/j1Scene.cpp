@@ -53,17 +53,29 @@ bool j1Scene::PreUpdate()
 bool j1Scene::Update(float dt)
 {
 
-	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
-		*Y += 300 * dt;
+	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT) {
+		//*Y += 300 * dt;
+		*cord.second += 300 * dt;
+	}
+		
 
-	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
-		*Y -= 300 * dt;
+	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) {
+		//*Y -= 300 * dt;
+		*cord.second -= 300 * dt;
+	}
+		
 
-	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
-		*X += 300 * dt;
+	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT) {
+		//*X += 300 * dt;
+		*cord.first += 300 * dt;
+	}
+		
 
-	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
-		*X -= 300 * dt;
+	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT) {
+		//*X -= 300 * dt;
+		*cord.first -= 300 * dt;
+	}
+		
 
 
 	App->map->Draw();
@@ -94,11 +106,12 @@ bool j1Scene::CleanUp()
 	return true;
 }
 
-void j1Scene::Try(int *x2, int* y2)
+void j1Scene::Try(int *x, int* y)
 {
 	
-	X = x2;
-	Y = y2;
+	X = x;
+	Y = y;
 
-
+	cord.first = x;
+	cord.second = y;
 }

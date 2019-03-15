@@ -34,11 +34,14 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void Try(int *x2, int* y2);
+	void Try(int *x, int* y);
 
 public:
 	int* X;
-	int*Y;
+	int* Y;
+
+	std::pair<int*, int*> cord;
+	
 };
 
 #endif // __j1SCENE_H__
