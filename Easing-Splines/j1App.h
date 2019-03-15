@@ -14,7 +14,6 @@ class j1Window;
 class j1Input;
 class j1Render;
 class j1Textures;
-class j1Audio;
 class j1Map;
 class j1Scene;
 
@@ -90,7 +89,6 @@ public:
 	j1Input*			input;
 	j1Render*			render;
 	j1Textures*			tex;
-	j1Audio*			audio;
 	j1Map*				map;
 	j1Scene*			scene;
 

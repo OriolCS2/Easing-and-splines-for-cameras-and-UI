@@ -4,9 +4,6 @@
     <ClCompile Include="j1Main.cpp" />
     <ClCompile Include="j1App.cpp" />
     <ClCompile Include="j1Scene.cpp" />
-    <ClCompile Include="j1Audio.cpp">
-      <Filter>Modules</Filter>
-    </ClCompile>
     <ClCompile Include="j1Input.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
@@ -38,9 +35,6 @@
   <ItemGroup>
     <ClInclude Include="j1Scene.h" />
     <ClInclude Include="j1App.h" />
-    <ClInclude Include="j1Audio.h">
-      <Filter>Modules</Filter>
-    </ClInclude>
     <ClInclude Include="j1Input.h">
       <Filter>Modules</Filter>
     </ClInclude>
