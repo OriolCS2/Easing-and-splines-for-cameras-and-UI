@@ -12,6 +12,7 @@
 EasingSplines::EasingSplines() : j1Module()
 {
 	name.assign("easingsplines");
+	
 }
 
 // Destructor
@@ -20,48 +21,22 @@ EasingSplines::~EasingSplines()
 
 }
 
-// Called before render is available
-bool EasingSplines::Awake()
-{
-	LOG("Loading Scene");
-	bool ret = true;
-
-	return ret;
-}
-
-// Called before the first frame
-bool EasingSplines::Start()
-{
-
-	return true;
-}
-
-// Called each loop iteration
-bool EasingSplines::PreUpdate()
-{
-	
-	
-
-	return true;
-}
-
 // Called each loop iteration
 bool EasingSplines::Update(float dt)
 {
+	std::list<EaseSplineInfo*>::iterator item = easing_splines.begin();
 
-
-
-
+	for (; item != easing_splines.end(); ++item) {
+		if (*item != nullptr) {
+			if (!(*item)->Update(dt)) {
+				easing_splines.erase(item);
+				delete(*item);
+				(*item) = nullptr;
+			}
+		}
+	}
 
 	return true;
-}
-
-// Called each loop iteration
-bool EasingSplines::PostUpdate()
-{
-	bool ret = true;
-
-	return ret;
 }
 
 // Called before quitting
@@ -74,16 +49,44 @@ bool EasingSplines::CleanUp()
 
 void EasingSplines::CreateSpline(int * position, int target_position, int velocity, TypeSpline type, float multiplier)
 {
+	EaseSplineInfo* info = new EaseSplineInfo(position, target_position, velocity, type, multiplier);
 
-	EaseSplineInfo* info = new EaseSplineInfo();
-
-
-	easing_splines.push_back(info);
+	if (info != nullptr)
+		easing_splines.push_back(info);
 }
 
-/*bool EaseSplineInfo::Update()
+bool EaseSplineInfo::Update(float dt)
 {
 	bool ret = true;
 
+	if (!HasFinished()) {
+		switch (type) {
+		case EASE: {
+			multiplier = multiplier * multiplier;
+		} break;
+		default:
+			break;
+		}
+		*position += (velocity*multiplier*dt);
+	}
+	else
+		ret = false;
+
 	return ret;
-}*/
+}
+
+bool EaseSplineInfo::HasFinished()
+{
+	bool ret = false;
+
+	if (velocity < 0) {
+		if (*position <= target_position)
+			ret = true;
+	}
+	else {
+		if (*position >= target_position)
+			ret = true;
+	}
+
+	return ret;
+}

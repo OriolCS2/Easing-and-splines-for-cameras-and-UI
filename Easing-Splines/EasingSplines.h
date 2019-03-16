@@ -15,27 +15,6 @@ enum TypeSpline {
 	NONE
 };
 
-
-/*struct EaseSplineInfo {
-
-	int * position;
-	int target_position;
-	int velocity;
-	TypeSpline type;
-	float multiplier;
-
-	bool Update();
-
-	/*EaseSplineInfo(int * position, int target_position, int velocity, TypeSpline type, float multiplier = 1.0f) {
-		this->position = position;
-		this->target_position = target_position;
-		this->velocity = velocity;
-		this->type = type;
-		this->multiplier = multiplier;
-	}
-
-};*/
-
 struct EaseSplineInfo
 {
 	int * position;
@@ -44,7 +23,18 @@ struct EaseSplineInfo
 	TypeSpline type;
 	float multiplier;
 
-	bool Update();
+	EaseSplineInfo(int * position, int target_position, int velocity, TypeSpline type, float multiplier = 1.0f) {
+		this->position = position;
+		this->target_position = target_position;
+		this->velocity = velocity;
+		this->type = type;
+		this->multiplier = multiplier;
+	}
+
+	bool Update(float dt);
+
+	bool HasFinished();
+
 };
 class EasingSplines : public j1Module
 {
@@ -55,20 +45,8 @@ public:
 	// Destructor
 	virtual ~EasingSplines();
 
-	// Called before render is available
-	bool Awake();
-
-	// Called before the first frame
-	bool Start();
-
-	// Called before all Updates
-	bool PreUpdate();
-
 	// Called each loop iteration
 	bool Update(float dt);
-
-	// Called before all Updates
-	bool PostUpdate();
 
 	// Called before quitting
 	bool CleanUp();

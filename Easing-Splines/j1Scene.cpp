@@ -10,6 +10,7 @@
 #include "j1Scene.h"
 #include <string>
 
+
 j1Scene::j1Scene() : j1Module()
 {
 	name.assign("scene");
@@ -90,7 +91,9 @@ bool j1Scene::Update(float dt)
 	}
 		
 
-
+	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
+		App->easing_splines->CreateSpline(&App->render->camera.x, App->render->camera.x + 2000, 300, EASE);
+	}
 	App->map->Draw();
 
 
