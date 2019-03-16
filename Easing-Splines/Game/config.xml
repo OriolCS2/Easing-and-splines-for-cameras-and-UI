@@ -22,6 +22,10 @@
     <folder>maps/</folder>
   </map>
 
+  <UI>
+    <sprite>textures/UI.png</sprite>
+  </UI>
+
 </config>
 
 <!-- Config file for the game -->

@@ -9,6 +9,9 @@
 #include "j1Map.h"
 #include "j1Scene.h"
 #include <string>
+#include "UI_Manager.h"
+#include "Image.h"
+#include "Label.h"
 
 
 j1Scene::j1Scene() : j1Module()
@@ -92,11 +95,12 @@ bool j1Scene::Update(float dt)
 		
 
 	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
-		App->easing_splines->CreateSpline(&App->render->camera.y, App->render->camera.y - 5000, 2000, EASE_IN_OUT_BACK);
+		//App->easing_splines->CreateSpline(&App->render->camera.y, App->render->camera.y - 5000, 2000, EASE_IN_OUT_BACK);
+		CreateMenuToMove();
 	}
 	App->map->Draw();
 
-
+	App->render->DrawQuad(rect, 255, 0, 255);
 
 	
 
@@ -134,4 +138,20 @@ void j1Scene::Try(int *x, int* y)
 	cord_to_move.push_back(cord);
 
 	
+}
+
+void j1Scene::CreateMenuToMove()
+{
+
+	/*imageSETTINGS = App->ui_manager->CreateImage(170, 1000, true);
+	imageSETTINGS->SetSpritesData({ 758,0,705,671 });
+	checkboxFPS = App->ui_manager->CreateCheckBox(380, 157, imageSETTINGS);
+	labelFPS = App->ui_manager->CreateLabel(100, 150, "CAP FPS TO 30", 50, true, imageSETTINGS);
+	labelSETTINGS = App->ui_manager->CreateLabel(imageSETTINGS->width / 2, 50, "SETTINGS", 60, true, imageSETTINGS);
+	labelSETTINGS->Local_pos.x -= labelSETTINGS->width / 2;
+	*/
+	
+	App->render->DrawQuad(rect, 255, 0, 255);
+	App->easing_splines->CreateSpline(&App->render->camera.x, App->render->camera.x - 500, 1000, EASE_IN_OUT_BACK);
+
 }
