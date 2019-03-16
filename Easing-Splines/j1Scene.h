@@ -38,8 +38,8 @@ public:
 	void Try(int *x, int* y);
 
 public:
-	int* X;
-	int* Y;
+	int* X = nullptr;
+	int* Y = nullptr;
 
 	std::pair<int*, int*> cord;
 

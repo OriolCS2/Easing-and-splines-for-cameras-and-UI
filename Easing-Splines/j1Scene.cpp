@@ -3,6 +3,7 @@
 #include "j1App.h"
 #include "j1Input.h"
 #include "j1Textures.h"
+#include "EasingSplines.h"
 #include "j1Render.h"
 #include "j1Window.h"
 #include "j1Map.h"
@@ -34,6 +35,7 @@ bool j1Scene::Start()
 	
 	App->map->Load("iso_walk.tmx");
 
+	
 	Try(&App->render->camera.x, &App->render->camera.y);
 	return true;
 }
@@ -53,7 +55,7 @@ bool j1Scene::Update(float dt)
 {
 
 	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT) {
-		//*Y += 300 * dt;
+	//	*Y += 300 * dt;
 		//*cord.second += 300 * dt;
 		for (std::list<std::pair<int*, int*>>::iterator item = cord_to_move.begin(); item != cord_to_move.end(); ++item) {
 			*item->second += 300 * dt;
@@ -125,6 +127,8 @@ void j1Scene::Try(int *x, int* y)
 
 	cord.first = x;
 	cord.second = y;
-
+	App->easing_splines->info.position = x;
 	cord_to_move.push_back(cord);
+
+	
 }

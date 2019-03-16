@@ -7,6 +7,29 @@
 struct SDL_Texture;
 struct SDL_Rect;
 
+struct EaseSplineInfo {
+
+	int * position;
+	int duration;
+	int initial_pos;
+	int time;
+	int time_start;
+	int velocity;
+
+	float EaseInQuad() {
+		return *position * (time /= duration)*time + initial_pos;
+	}
+
+	bool Finished() {
+
+		return time <= duration;
+	}
+};
+
+enum class TypeSpline {
+
+	NONE,
+};
 
 class EasingSplines : public j1Module
 {
@@ -35,11 +58,13 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-
+	int EaseInQuad(int time, int initial_pos, int current_pos, int duration) {
+		return current_pos * (time /= duration)*time + initial_pos;
+	}
 
 public:
 
-
+	EaseSplineInfo info;
 };
 
-#endif
+#endif 

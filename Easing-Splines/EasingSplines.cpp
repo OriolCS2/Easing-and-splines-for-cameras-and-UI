@@ -16,7 +16,9 @@ EasingSplines::EasingSplines() : j1Module()
 
 // Destructor
 EasingSplines::~EasingSplines()
-{}
+{
+
+}
 
 // Called before render is available
 bool EasingSplines::Awake()
@@ -30,15 +32,19 @@ bool EasingSplines::Awake()
 // Called before the first frame
 bool EasingSplines::Start()
 {
-
+	//info.position = &App->render->camera.x;
+	info.duration = 10000;
+	info.initial_pos = *info.position;
+	info.velocity = 300;
+	info.time_start = SDL_GetTicks();
 	return true;
 }
 
 // Called each loop iteration
 bool EasingSplines::PreUpdate()
 {
-
-
+	
+	
 
 	return true;
 }
@@ -47,8 +53,11 @@ bool EasingSplines::PreUpdate()
 bool EasingSplines::Update(float dt)
 {
 
+	info.time = SDL_GetTicks() - info.time_start;
+	if (info.Finished())
+		*info.position += (float)(info.EaseInQuad() * (float)(info.velocity * dt));
 
-
+	
 
 
 
