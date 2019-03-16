@@ -12,6 +12,7 @@ enum TypeSpline {
 
 	EASE,
 	EASE_OUT_QUINT,
+	EASE_IN_OUT_BACK,
 
 	NONE
 };

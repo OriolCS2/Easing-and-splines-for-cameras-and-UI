@@ -49,9 +49,9 @@ bool EasingSplines::CleanUp()
 
 	for (; item != easing_splines.end(); ++item) {
 		if (*item != nullptr) {
-			easing_splines.erase(item);
 			delete(*item);
 			(*item) = nullptr;
+			easing_splines.erase(item);
 		}
 	}
 
@@ -84,6 +84,16 @@ bool EaseSplineInfo::Update(float dt)
 		} break;
 		case EASE_OUT_QUINT: {
 			*position = distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed*time_passed + 1) + initial_position;                   //c*((t = t / d - 1)*t*t*t*t + 1) + b;
+		} break;
+		case EASE_IN_OUT_BACK: {
+			float s = 1.70158f;
+			if ((time_passed /= time_to_travel / 2) < 1) {
+				*position = distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
+			}
+			else {
+				float postFix = time_passed -= 2;
+				*position = distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
+			}
 		} break;
 		default:
 			break;
