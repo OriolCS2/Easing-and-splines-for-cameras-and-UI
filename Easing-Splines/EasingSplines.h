@@ -19,21 +19,23 @@ struct EaseSplineInfo
 {
 	int * position;
 	int target_position;
-	int velocity;
 	TypeSpline type;
-	float multiplier;
-
-	EaseSplineInfo(int * position, int target_position, int velocity, TypeSpline type, float multiplier = 1.0f) {
-		this->position = position;
-		this->target_position = target_position;
-		this->velocity = velocity;
-		this->type = type;
-		this->multiplier = multiplier;
-	}
+	int initial_position;
+	int distance_to_travel;
+	int time_to_travel;
+	float time_started;
 
 	bool Update(float dt);
 
-	bool HasFinished();
+	EaseSplineInfo(int * position, int target_position, int time_to_travel, TypeSpline type) {
+		this->position = position;
+		this->initial_position = *position;
+		this->target_position = target_position;
+		this->distance_to_travel = target_position - *position;
+		this->type = type;
+		this->time_to_travel = time_to_travel;
+	}
+
 
 };
 class EasingSplines : public j1Module
@@ -51,7 +53,7 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void CreateSpline(int * position, int target_position, int velocity, TypeSpline type, float multiplier = 1.0f);
+	void CreateSpline(int * position, int target_position, int time_to_travel, TypeSpline type);
 
 private:
 
