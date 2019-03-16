@@ -12,6 +12,8 @@
 #include "j1Textures.h"
 #include "j1App.h"
 #include "j1Scene.h"
+#include "UI_Manager.h"
+#include "j1Fonts.h"
 #include "j1Map.h"
 #include "EasingSplines.h"
 #include "p2Point.h"

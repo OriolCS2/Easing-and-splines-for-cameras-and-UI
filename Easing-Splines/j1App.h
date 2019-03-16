@@ -17,6 +17,8 @@ class j1Textures;
 class j1Map;
 class j1Scene;
 class EasingSplines;
+class UI_Manager;
+class j1Fonts;
 
 
 class j1App
@@ -85,13 +87,15 @@ private:
 public:
 
 	// Modules
-	j1Window * win;
+	j1Window *			win;
 	j1Input*			input;
 	j1Render*			render;
 	j1Textures*			tex;
 	j1Map*				map;
 	j1Scene*			scene;
 	EasingSplines*		easing_splines;
+	j1Fonts*			fonts;
+	UI_Manager*			ui_manager;
 
 private:
 

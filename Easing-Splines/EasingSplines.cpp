@@ -80,7 +80,6 @@ bool EaseSplineInfo::Update(float dt)
 		switch (type) {
 		case EASE: {
 			*position = distance_to_travel * (time_passed / time_to_travel) + initial_position;    
-			LOG("time_passed: %f", time_passed);
 		} break;
 		case EASE_OUT_QUINT: {
 			*position = distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed*time_passed + 1) + initial_position;                   //c*((t = t / d - 1)*t*t*t*t + 1) + b;

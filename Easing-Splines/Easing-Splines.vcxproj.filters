@@ -34,6 +34,27 @@
     <ClCompile Include="EasingSplines.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
+    <ClCompile Include="j1Fonts.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Manager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Element.cpp">
+      <Filter>ElementsUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>ElementsUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>ElementsUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckBox.cpp">
+      <Filter>ElementsUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>ElementsUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="j1Scene.h" />
@@ -83,6 +104,27 @@
     <ClInclude Include="EasingSplines.h">
       <Filter>Modules</Filter>
     </ClInclude>
+    <ClInclude Include="j1Fonts.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_Manager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_Element.h">
+      <Filter>ElementsUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>ElementsUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>ElementsUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckBox.h">
+      <Filter>ElementsUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>ElementsUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Game\config.xml" />
@@ -93,6 +135,9 @@
     </Filter>
     <Filter Include="Tools">
       <UniqueIdentifier>{dd2843ae-1a26-428b-b888-621c7abbf945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ElementsUI">
+      <UniqueIdentifier>{9edda8c0-ae6b-4fdf-9b63-325ec4ef5d5d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
