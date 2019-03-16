@@ -11,6 +11,7 @@ struct SDL_Rect;
 enum TypeSpline {
 
 	EASE,
+	EASE_OUT_QUINT,
 
 	NONE
 };

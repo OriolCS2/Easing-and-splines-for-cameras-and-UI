@@ -92,7 +92,7 @@ bool j1Scene::Update(float dt)
 		
 
 	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
-		App->easing_splines->CreateSpline(&App->render->camera.x, App->render->camera.x + 2000, 2000, EASE);
+		App->easing_splines->CreateSpline(&App->render->camera.x, App->render->camera.x - 5000, 8000, EASE_OUT_QUINT);
 	}
 	App->map->Draw();
 
