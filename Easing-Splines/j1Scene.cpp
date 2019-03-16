@@ -127,7 +127,7 @@ void j1Scene::Try(int *x, int* y)
 
 	cord.first = x;
 	cord.second = y;
-	App->easing_splines->info.position = x;
+
 	cord_to_move.push_back(cord);
 
 	

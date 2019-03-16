@@ -32,11 +32,7 @@ bool EasingSplines::Awake()
 // Called before the first frame
 bool EasingSplines::Start()
 {
-	//info.position = &App->render->camera.x;
-	info.duration = 10000;
-	info.initial_pos = *info.position;
-	info.velocity = 300;
-	info.time_start = SDL_GetTicks();
+
 	return true;
 }
 
@@ -53,11 +49,6 @@ bool EasingSplines::PreUpdate()
 bool EasingSplines::Update(float dt)
 {
 
-	info.time = SDL_GetTicks() - info.time_start;
-	if (info.Finished())
-		*info.position += (float)(info.EaseInQuad() * (float)(info.velocity * dt));
-
-	
 
 
 
@@ -81,4 +72,18 @@ bool EasingSplines::CleanUp()
 	return true;
 }
 
+void EasingSplines::CreateSpline(int * position, int target_position, int velocity, TypeSpline type, float multiplier)
+{
 
+	EaseSplineInfo* info = new EaseSplineInfo();
+
+
+	easing_splines.push_back(info);
+}
+
+/*bool EaseSplineInfo::Update()
+{
+	bool ret = true;
+
+	return ret;
+}*/
