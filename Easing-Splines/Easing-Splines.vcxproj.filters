@@ -43,16 +43,7 @@
     <ClCompile Include="UI_Element.cpp">
       <Filter>ElementsUI</Filter>
     </ClCompile>
-    <ClCompile Include="Label.cpp">
-      <Filter>ElementsUI</Filter>
-    </ClCompile>
     <ClCompile Include="Image.cpp">
-      <Filter>ElementsUI</Filter>
-    </ClCompile>
-    <ClCompile Include="CheckBox.cpp">
-      <Filter>ElementsUI</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
       <Filter>ElementsUI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,16 +104,7 @@
     <ClInclude Include="UI_Element.h">
       <Filter>ElementsUI</Filter>
     </ClInclude>
-    <ClInclude Include="Label.h">
-      <Filter>ElementsUI</Filter>
-    </ClInclude>
     <ClInclude Include="Image.h">
-      <Filter>ElementsUI</Filter>
-    </ClInclude>
-    <ClInclude Include="CheckBox.h">
-      <Filter>ElementsUI</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
       <Filter>ElementsUI</Filter>
     </ClInclude>
   </ItemGroup>

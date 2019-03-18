@@ -8,7 +8,6 @@
 class Button;
 class UI_Element;
 class Image;
-class Label;
 class CheckBox;
 struct SDL_Texture;
 
@@ -31,10 +30,7 @@ public:
 
 	bool Save(pugi::xml_node&) const;
 
-	Button* CreateButton(int x, int y, UI_Element* parent = nullptr, std::string name = "NONE", int size = 0);
-	CheckBox* CreateCheckBox(int x, int y, UI_Element* parent = nullptr);
-	Image* CreateImage(int x, int y, bool WantToBeMoved, UI_Element* parent = nullptr);
-	Label* CreateLabel(int x, int y, std::string name, int size, bool CanBeMoved, UI_Element* parent = nullptr);
+	Image* CreateImage(int x, int y);
 	
 	void DeleteAllUI();
 

@@ -94,7 +94,7 @@ bool j1Scene::Update(float dt)
 	}
 		
 
-	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
+	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_DOWN) {
 		//App->easing_splines->CreateSpline(&App->render->camera.y, App->render->camera.y - 5000, 2000, EASE_IN_OUT_BACK);
 		CreateMenuToMove();
 	}
@@ -143,15 +143,12 @@ void j1Scene::Try(int *x, int* y)
 void j1Scene::CreateMenuToMove()
 {
 
-	/*imageSETTINGS = App->ui_manager->CreateImage(170, 1000, true);
+	imageSETTINGS = App->ui_manager->CreateImage(0, 0);
 	imageSETTINGS->SetSpritesData({ 758,0,705,671 });
-	checkboxFPS = App->ui_manager->CreateCheckBox(380, 157, imageSETTINGS);
-	labelFPS = App->ui_manager->CreateLabel(100, 150, "CAP FPS TO 30", 50, true, imageSETTINGS);
-	labelSETTINGS = App->ui_manager->CreateLabel(imageSETTINGS->width / 2, 50, "SETTINGS", 60, true, imageSETTINGS);
-	labelSETTINGS->Local_pos.x -= labelSETTINGS->width / 2;
-	*/
+
+	
 	
 	App->render->DrawQuad(rect, 255, 0, 255);
-	App->easing_splines->CreateSpline(&App->render->camera.x, App->render->camera.x - 500, 1000, EASE_IN_OUT_BACK);
+	App->easing_splines->CreateSpline(&imageSETTINGS->Scree_pos.x, imageSETTINGS->Scree_pos.x - 500, 1000, EASE_IN_OUT_BACK);
 
 }

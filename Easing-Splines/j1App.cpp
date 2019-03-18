@@ -30,7 +30,8 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	map = new j1Map();
 	scene = new j1Scene();
 	easing_splines = new EasingSplines();
-
+	ui_manager = new UI_Manager();
+	fonts = new j1Fonts();
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -39,7 +40,9 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(tex);
 	AddModule(map);
 	AddModule(scene);
+	AddModule(ui_manager);
 	AddModule(easing_splines);
+	AddModule(fonts);
 	// render last to swap buffer
 	AddModule(render);
 

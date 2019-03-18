@@ -13,13 +13,10 @@
 class Image : public UI_Element {
 public:
 
-	Image(int x, int y, bool WantToBeMoved, UI_Element* parent = nullptr);
+	Image(int x, int y);
 	virtual ~Image();
-	bool Update(float dt);
 
-private:
-	bool WantToBeMoved = false;
-	iPoint Distance;
+
 };
 
 

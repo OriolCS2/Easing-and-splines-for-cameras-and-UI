@@ -80,8 +80,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="CheckBox.cpp" />
     <ClCompile Include="EasingSplines.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="j1Fonts.cpp" />
@@ -92,7 +90,6 @@
     <ClCompile Include="j1PerfTimer.cpp" />
     <ClCompile Include="j1Scene.cpp" />
     <ClCompile Include="j1Timer.cpp" />
-    <ClCompile Include="Label.cpp" />
     <ClCompile Include="p2Log.cpp" />
     <ClCompile Include="j1Render.cpp" />
     <ClCompile Include="j1Textures.cpp" />
@@ -102,8 +99,6 @@
     <ClCompile Include="UI_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Button.h" />
-    <ClInclude Include="CheckBox.h" />
     <ClInclude Include="EasingSplines.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="j1Fonts.h" />
@@ -111,7 +106,6 @@
     <ClInclude Include="j1PerfTimer.h" />
     <ClInclude Include="j1Scene.h" />
     <ClInclude Include="j1Timer.h" />
-    <ClInclude Include="Label.h" />
     <ClInclude Include="p2Animation.h" />
     <ClInclude Include="j1Input.h" />
     <ClInclude Include="p2Log.h" />

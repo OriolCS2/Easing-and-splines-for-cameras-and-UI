@@ -58,17 +58,6 @@ public:
 	//MENU
 	Button* buttonGOBACKSETTINGS = nullptr;
 	Image* imageSETTINGS = nullptr;
-	CheckBox* checkboxFPS = nullptr;
-	Label* labelFPS = nullptr;
-	SDL_Texture* Settings = nullptr;
-	Label* labelMUSICVOLUME = nullptr;
-	Label* labelSETTINGS = nullptr;
-	Label* labelVOLUMEFX = nullptr;
-	Label* labelGODMODE = nullptr;
-	CheckBox* checkboxGODMODE = nullptr;
-	Label* labelGENERALSOUND = nullptr;
-	CheckBox* checkboxSOUND = nullptr;
-	Label* labelSOUND = nullptr;
 	int x = 170;
 	int y = 950;
 
