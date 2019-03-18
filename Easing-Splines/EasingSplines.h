@@ -18,18 +18,23 @@ enum TypeSpline {
 	NONE
 };
 
-struct EaseSplineInfo
-{
+struct EaseFunctions {
+	int EaseOutQuint(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
+	int Ease(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
+	int EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
+};
+
+struct EaseSplineInfo {
 	int * position;
 	TypeSpline type;
 	int initial_position;
 	int distance_to_travel;
-	int time_to_travel;
-	int time_started;
-
+	float time_to_travel;
+	float time_started;
+	EaseFunctions ease_function;
 	bool Update(float dt);
 
-	EaseSplineInfo(int * position, int target_position, int time_to_travel, TypeSpline type) {
+	EaseSplineInfo(int * position, const int target_position, const float time_to_travel, TypeSpline type) {
 		this->position = position;
 		this->initial_position = *position;
 		this->distance_to_travel = target_position - *position;
@@ -38,8 +43,8 @@ struct EaseSplineInfo
 		time_started = SDL_GetTicks();
 	}
 
-
 };
+
 class EasingSplines : public j1Module
 {
 public:
@@ -55,17 +60,14 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void CreateSpline(int * position, int target_position, int time_to_travel, TypeSpline type);
+	void CreateSpline(int * position, int target_position, const float time_to_travel, TypeSpline type);
+
 
 private:
-
-
-
 
 	std::list<EaseSplineInfo*> easing_splines;
 
 
-public:
 
 
 

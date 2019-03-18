@@ -148,6 +148,6 @@ void j1Scene::CreateMenuToMove()
 	
 	
 	App->render->DrawQuad(rect, 255, 0, 255);
-	App->easing_splines->CreateSpline(&imageSETTINGS->Scree_pos.x, imageSETTINGS->Scree_pos.x - 500, 1000, EASE_IN_OUT_BACK);
+	App->easing_splines->CreateSpline(&imageSETTINGS->Scree_pos.x, imageSETTINGS->Scree_pos.x - 1500, 1000, EASE_IN_OUT_BACK);
 
 }

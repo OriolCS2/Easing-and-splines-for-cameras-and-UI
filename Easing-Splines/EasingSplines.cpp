@@ -60,7 +60,7 @@ bool EasingSplines::CleanUp()
 	return true;
 }
 
-void EasingSplines::CreateSpline(int * position, int target_position, int time_to_travel, TypeSpline type)
+void EasingSplines::CreateSpline(int * position, const int target_position, const float time_to_travel, TypeSpline type)
 {
 	EaseSplineInfo* info = new EaseSplineInfo(position, target_position, time_to_travel, type);
 
@@ -69,6 +69,9 @@ void EasingSplines::CreateSpline(int * position, int target_position, int time_t
 	else
 		LOG("Could not create the Spline...");
 }
+
+
+
 
 bool EaseSplineInfo::Update(float dt)
 {
@@ -79,20 +82,13 @@ bool EaseSplineInfo::Update(float dt)
 	if (time_passed < time_to_travel) {
 		switch (type) {
 		case EASE: {
-			*position = distance_to_travel * (time_passed / time_to_travel) + initial_position;    
+			*position = ease_function.Ease(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
 		case EASE_OUT_QUINT: {
-			*position = distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed*time_passed + 1) + initial_position;                   //c*((t = t / d - 1)*t*t*t*t + 1) + b;
+			*position = ease_function.EaseOutQuint(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
 		case EASE_IN_OUT_BACK: {
-			float s = 1.70158f;
-			if ((time_passed /= time_to_travel / 2) < 1) {
-				*position = distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
-			}
-			else {
-				float postFix = time_passed -= 2;
-				*position = distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
-			}
+			*position = ease_function.EaseInOutBack(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
 		default:
 			break;
@@ -104,3 +100,24 @@ bool EaseSplineInfo::Update(float dt)
 	return ret;
 }
 
+int EaseFunctions::EaseOutQuint(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	return distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed*time_passed + 1) + initial_position;;
+}
+
+int EaseFunctions::Ease(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	return distance_to_travel * (time_passed / time_to_travel) + initial_position;
+}
+
+int EaseFunctions::EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	float s = 1.70158f;
+	if ((time_passed /= time_to_travel / 2) < 1) {
+		return distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
+	}
+	else {
+		float postFix = time_passed -= 2;
+		return distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
+	}
+}
