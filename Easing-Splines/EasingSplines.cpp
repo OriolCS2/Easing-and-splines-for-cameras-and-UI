@@ -64,10 +64,10 @@ void EasingSplines::CreateSpline(int * position, int target_position, int time_t
 {
 	EaseSplineInfo* info = new EaseSplineInfo(position, target_position, time_to_travel, type);
 
-	info->time_started = SDL_GetTicks();
-
 	if (info != nullptr)
 		easing_splines.push_back(info);
+	else
+		LOG("Could not create the Spline...");
 }
 
 bool EaseSplineInfo::Update(float dt)

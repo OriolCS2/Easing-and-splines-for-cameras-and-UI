@@ -1,4 +1,3 @@
-#include "p2Defs.h"
 #include "p2Log.h"
 #include "j1App.h"
 #include "j1Input.h"
@@ -11,7 +10,7 @@
 #include <string>
 #include "UI_Manager.h"
 #include "Image.h"
-#include "Label.h"
+
 
 
 j1Scene::j1Scene() : j1Module()
