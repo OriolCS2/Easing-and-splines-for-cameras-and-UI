@@ -77,7 +77,7 @@ bool j1Scene::Update(float dt)
 
 
 	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
-		App->easing_splines->CreateSpline(&quad.x, quad.x + 1000, 3000, TypeSpline::EASE_OUT_QUINT);
+		App->easing_splines->CreateSpline(&quad.x, quad.x + 1000, 3000, TypeSpline::EASE_OUT_QUART);
 	}
 
 

@@ -14,6 +14,7 @@ enum class TypeSpline {
 	EASE,
 	EASE_OUT_QUINT,
 	EASE_IN_OUT_BACK,
+	EASE_OUT_QUART,
 
 
 	NONE
@@ -23,6 +24,7 @@ struct EaseFunctions {
 	int EaseOutQuint(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
 	int Ease(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
 	int EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
+	int EaseOutQuart(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
 };
 
 struct EaseSplineInfo {
