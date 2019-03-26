@@ -27,13 +27,15 @@ bool EasingSplines::Update(float dt)
 {
 	std::list<EaseSplineInfo*>::iterator item = easing_splines.begin();
 
-	for (; item != easing_splines.end(); ++item) {
+	while (item != easing_splines.end()) {
 		if (*item != nullptr) {
 			if (!(*item)->Update(dt)) {
-				easing_splines.erase(item);
 				delete(*item);
 				(*item) = nullptr;
+				item = easing_splines.erase(item); // look this, not sure :(
 			}
+			else
+				++item;
 		}
 	}
 
@@ -51,7 +53,6 @@ bool EasingSplines::CleanUp()
 		if (*item != nullptr) {
 			delete(*item);
 			(*item) = nullptr;
-			easing_splines.erase(item);
 		}
 	}
 
@@ -81,13 +82,13 @@ bool EaseSplineInfo::Update(float dt)
 
 	if (time_passed < time_to_travel) {
 		switch (type) {
-		case EASE: {
+		case TypeSpline::EASE: {
 			*position = ease_function.Ease(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
-		case EASE_OUT_QUINT: {
+		case TypeSpline::EASE_OUT_QUINT: {
 			*position = ease_function.EaseOutQuint(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
-		case EASE_IN_OUT_BACK: {
+		case TypeSpline::EASE_IN_OUT_BACK: {
 			*position = ease_function.EaseInOutBack(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
 		default:

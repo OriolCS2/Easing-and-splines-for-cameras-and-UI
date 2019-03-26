@@ -41,26 +41,9 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void Try(int *x, int* y);
+public: 
 
-	void CreateMenuToMove();
-
-public:
-	int* X = nullptr;
-	int* Y = nullptr;
-
-	std::pair<int*, int*> cord;
-
-	std::list<std::pair<int*, int*>> cord_to_move;
-
-	SDL_Rect rect{ -500,200,100,100 };
-
-	//MENU
-	Button* buttonGOBACKSETTINGS = nullptr;
-	Image* imageSETTINGS = nullptr;
-	int x = 170;
-	int y = 950;
-
+	SDL_Rect quad{ -490,300,70,40 };
 
 	
 };
