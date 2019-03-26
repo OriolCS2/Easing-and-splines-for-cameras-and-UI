@@ -97,6 +97,12 @@ bool EaseSplineInfo::Update(float dt)
 		case TypeSpline::EASE_IN_QUAD: {
 			*position = ease_function.EaseInQuad(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
+		case TypeSpline::EASE_IN_OUT_EXPO: {
+			*position = ease_function.EaseInOutExpo(time_passed, initial_position, distance_to_travel, time_to_travel);
+		} break;
+		case TypeSpline::EASE_OUT_ELASTIC: {
+			*position = ease_function.EaseOutElastic(time_passed, initial_position, distance_to_travel, time_to_travel);
+		} break;
 		default:
 			LOG("No valid EaseType");
 			break;
@@ -120,14 +126,16 @@ int EaseFunctions::Ease(float time_passed, int initial_position, int distance_to
 
 int EaseFunctions::EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
 {
+	int pos = 0;
 	float s = 1.70158f;
 	if ((time_passed /= time_to_travel / 2) < 1) {
-		return distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
+		pos = distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
 	}
 	else {
 		float postFix = time_passed -= 2;
-		return distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
+		pos = distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
 	}
+	return pos;
 }
 
 int EaseFunctions::EaseOutQuart(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
@@ -138,4 +146,30 @@ int EaseFunctions::EaseOutQuart(float time_passed, int initial_position, int dis
 int EaseFunctions::EaseInQuad(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
 {
 	return distance_to_travel * (time_passed /= time_to_travel)*time_passed + initial_position;
+}
+
+int EaseFunctions::EaseInOutExpo(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	int pos = 0;
+
+    if ((time_passed /= time_to_travel / 2) < 1) {
+		pos = distance_to_travel / 2 * pow(2, 10 * (time_passed - 1)) + initial_position;
+	}
+	else {
+		pos = distance_to_travel / 2 * (-pow(2, -10 * --time_passed) + 2) + initial_position;
+	}
+	return pos;
+}
+
+int EaseFunctions::EaseOutElastic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	int pos = 0;
+
+	if ((time_passed /= time_to_travel) == 1) {
+		pos = initial_position + distance_to_travel;
+	}
+	else {
+		pos = (distance_to_travel*pow(2, -10 * time_passed) * sin((time_passed*time_to_travel - ((time_to_travel * 0.3)/4))*(2 * 3.14) / (time_to_travel * 0.3)) + distance_to_travel + initial_position);
+	}
+	return pos;
 }
