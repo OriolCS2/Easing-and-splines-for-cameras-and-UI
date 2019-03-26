@@ -103,6 +103,12 @@ bool EaseSplineInfo::Update(float dt)
 		case TypeSpline::EASE_OUT_ELASTIC: {
 			*position = ease_function.EaseOutElastic(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
+		case TypeSpline::EASE_OUT_CUBIC: {
+			*position = ease_function.EaseOutCubic(time_passed, initial_position, distance_to_travel, time_to_travel);
+		} break;
+		case TypeSpline::EASE_IN_CIRC: {
+			*position = ease_function.EaseInCirc(time_passed, initial_position, distance_to_travel, time_to_travel);
+		} break;
 		default:
 			LOG("No valid EaseType");
 			break;
@@ -172,4 +178,14 @@ int EaseFunctions::EaseOutElastic(float time_passed, int initial_position, int d
 		pos = (distance_to_travel*pow(2, -10 * time_passed) * sin((time_passed*time_to_travel - ((time_to_travel * 0.3)/4))*(2 * 3.14) / (time_to_travel * 0.3)) + distance_to_travel + initial_position);
 	}
 	return pos;
+}
+
+int EaseFunctions::EaseOutCubic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	return distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed + 1) + initial_position;
+}
+
+int EaseFunctions::EaseInCirc(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	return -distance_to_travel * (sqrt(1 - (time_passed /= time_to_travel)*time_passed) - 1) + initial_position;
 }
