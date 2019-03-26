@@ -12,8 +12,6 @@
 #include "j1Textures.h"
 #include "j1App.h"
 #include "j1Scene.h"
-#include "UI_Manager.h"
-#include "j1Fonts.h"
 #include "j1Map.h"
 #include "EasingSplines.h"
 #include "p2Point.h"
@@ -30,8 +28,6 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	map = new j1Map();
 	scene = new j1Scene();
 	easing_splines = new EasingSplines();
-	ui_manager = new UI_Manager();
-	fonts = new j1Fonts();
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -40,9 +36,8 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(tex);
 	AddModule(map);
 	AddModule(scene);
-	AddModule(ui_manager);
 	AddModule(easing_splines);
-	AddModule(fonts);
+
 	// render last to swap buffer
 	AddModule(render);
 

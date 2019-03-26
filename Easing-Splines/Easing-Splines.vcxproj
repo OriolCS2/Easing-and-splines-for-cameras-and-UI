@@ -81,8 +81,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EasingSplines.cpp" />
-    <ClCompile Include="Image.cpp" />
-    <ClCompile Include="j1Fonts.cpp" />
     <ClCompile Include="j1Main.cpp" />
     <ClCompile Include="j1App.cpp" />
     <ClCompile Include="j1Input.cpp" />
@@ -95,13 +93,9 @@
     <ClCompile Include="j1Textures.cpp" />
     <ClCompile Include="j1Window.cpp" />
     <ClCompile Include="PugiXml\src\pugixml.cpp" />
-    <ClCompile Include="UI_Element.cpp" />
-    <ClCompile Include="UI_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EasingSplines.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="j1Fonts.h" />
     <ClInclude Include="j1Map.h" />
     <ClInclude Include="j1PerfTimer.h" />
     <ClInclude Include="j1Scene.h" />
@@ -118,8 +112,6 @@
     <ClInclude Include="j1Window.h" />
     <ClInclude Include="PugiXml\src\pugiconfig.hpp" />
     <ClInclude Include="PugiXml\src\pugixml.hpp" />
-    <ClInclude Include="UI_Element.h" />
-    <ClInclude Include="UI_Manager.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Game\config.xml">

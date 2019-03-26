@@ -17,8 +17,7 @@ class j1Textures;
 class j1Map;
 class j1Scene;
 class EasingSplines;
-class UI_Manager;
-class j1Fonts;
+
 
 
 class j1App
@@ -94,8 +93,6 @@ public:
 	j1Map*				map;
 	j1Scene*			scene;
 	EasingSplines*		easing_splines;
-	j1Fonts*			fonts;
-	UI_Manager*			ui_manager;
 
 private:
 

@@ -7,13 +7,6 @@
 struct SDL_Texture;
 struct SDL_Rect;
 
-class Image;
-class CheckBox;
-class Label;
-class Button;
-class UI_Element;
-
-
 class j1Scene : public j1Module
 {
 public:
