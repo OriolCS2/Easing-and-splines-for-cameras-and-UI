@@ -94,6 +94,9 @@ bool EaseSplineInfo::Update(float dt)
 		case TypeSpline::EASE_OUT_QUART: {
 			*position = ease_function.EaseOutQuart(time_passed, initial_position, distance_to_travel, time_to_travel);
 		} break;
+		case TypeSpline::EASE_IN_QUAD: {
+			*position = ease_function.EaseInQuad(time_passed, initial_position, distance_to_travel, time_to_travel);
+		} break;
 		default:
 			LOG("No valid EaseType");
 			break;
@@ -130,5 +133,9 @@ int EaseFunctions::EaseInOutBack(float time_passed, int initial_position, int di
 int EaseFunctions::EaseOutQuart(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
 {
 	return -distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed - 1) + initial_position;
+}
 
+int EaseFunctions::EaseInQuad(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+{
+	return distance_to_travel * (time_passed /= time_to_travel)*time_passed + initial_position;
 }
