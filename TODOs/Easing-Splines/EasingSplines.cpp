@@ -76,6 +76,7 @@ bool EaseSplineInfo::Update(float dt)
 	// If the splines has finished, Update must end with a false in order to delete it, look line 21. 
 
 	// TODO 4: If the spline has not finished, make a switch with the spline type and call its type function. Look what this function returns! 
+	// Make this for 1 case just to test, choose the spline you want.
 
 	return ret;
 }
