@@ -29,10 +29,10 @@ bool j1Scene::Awake()
 // Called before the first frame
 bool j1Scene::Start()
 {
-	//std::string map("iso_walk.tmx");
 	
-	App->map->Load("iso_walk.tmx");
-	App->render->camera.x += 500;
+	App->map->Load("Map1.tmx");
+	App->render->camera.x -= 300;
+	App->render->camera.y -= 200;
 	return true;
 }
 
@@ -71,17 +71,19 @@ bool j1Scene::Update(float dt)
 		
 
 
-	if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
+	/*if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
 		App->easing_splines->CreateSpline(&quad.x, quad.x + 800, 3000, TypeSpline::EASE_IN_CIRC);
+	}*/
+
+
+	if (App->input->GetKey(SDL_SCANCODE_F) == KEY_DOWN) {
+		App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 10450, 8000, TypeSpline::EASE_OUT_QUINT);
 	}
-
-
-
 
 
 	App->map->Draw();
 
-	App->render->DrawQuad(quad, 255, 0, 255);
+	//App->render->DrawQuad(quad, 255, 0, 255);
 
 	
 	
