@@ -69,45 +69,14 @@ bool EaseSplineInfo::Update(float dt)
 {
 	bool ret = true;
 
-	float time_passed = SDL_GetTicks() - time_started;
-
-	if (time_passed < time_to_travel) {
-		switch (type) {
-		case TypeSpline::EASE: {
-			*position = ease_function.Ease(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_OUT_QUINT: {
-			*position = ease_function.EaseOutQuint(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_IN_OUT_BACK: {
-			*position = ease_function.EaseInOutBack(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_OUT_QUART: {
-			*position = ease_function.EaseOutQuart(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_IN_QUAD: {
-			*position = ease_function.EaseInQuad(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_IN_OUT_EXPO: {
-			*position = ease_function.EaseInOutExpo(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_OUT_ELASTIC: {
-			*position = ease_function.EaseOutElastic(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_OUT_CUBIC: {
-			*position = ease_function.EaseOutCubic(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		case TypeSpline::EASE_IN_CIRC: {
-			*position = ease_function.EaseInCirc(time_passed, initial_position, distance_to_travel, time_to_travel);
-		} break;
-		default:
-			LOG("No valid EaseType");
-			break;
-		}
-	}
-	else 
-		ret = false;
+	// TODO 2: Calculate the time that has passed since the spline started. Save this value in a float. 1 line
 	
+	
+	// TODO 3: Think how can we know if a spline has finished or not using the time calculated before. 
+	// If the splines has finished, Update must end with a false in order to delete it, look line 21. 
+
+	// TODO 4: If the spline has not finished, make a switch with the spline type and call its type function. Look what this function returns! 
+
 	return ret;
 }
 

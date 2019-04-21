@@ -62,17 +62,13 @@ bool j1Scene::Update(float dt)
 		App->render->camera.x -= 300 * dt;
 	}
 
-	/*if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
-		App->easing_splines->CreateSpline(&quad.x, quad.x + 800, 3000, TypeSpline::EASE_IN_CIRC);
-	}*/
-
 	if (App->input->GetKey(SDL_SCANCODE_F) == KEY_DOWN) {
-		App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 10450, 8000, TypeSpline::EASE_OUT_QUINT);
+		// TODO 5: Look the function CreateSpline() from EasingSplines.cpp, then use it to create one. 
+		
 	}
 
 	App->map->Draw();
 
-	//App->render->DrawQuad(quad, 255, 0, 255);
 
 	return true;
 }

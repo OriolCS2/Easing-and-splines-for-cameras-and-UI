@@ -83,7 +83,6 @@ bool j1App::Awake()
 		title.assign(app_config.child("title").child_value());
 		organization.assign(app_config.child("organization").child_value());
 
-		// TODO 1: Read from config file your framerate cap
 
 		int cap = app_config.attribute("framerate_cap").as_int();
 		if (cap > 0)
