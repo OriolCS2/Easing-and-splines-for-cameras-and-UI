@@ -18,17 +18,16 @@ bool EasingSplines::Update(float dt)
 {
 	std::list<EaseSplineInfo*>::iterator item = easing_splines.begin();
 
-	while (item != easing_splines.end()) {
+	for (; item != easing_splines.end(); ++item) {
 		if (*item != nullptr) {
 			if (!(*item)->Update(dt)) {
 				delete(*item);
 				(*item) = nullptr;
-				item = easing_splines.erase(item); // look this, not sure :(
 			}
-			else
-				++item;
 		}
 	}
+
+	easing_splines.remove(nullptr);
 
 	return true;
 }
@@ -54,6 +53,7 @@ bool EasingSplines::CleanUp()
 
 void EasingSplines::CreateSpline(int * position, const int &target_position, const float &time_to_travel, const TypeSpline &type)
 {
+
 	EaseSplineInfo* info = new EaseSplineInfo(position, target_position, time_to_travel, type);
 
 	if (info != nullptr)

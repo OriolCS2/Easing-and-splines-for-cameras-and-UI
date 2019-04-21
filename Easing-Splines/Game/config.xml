@@ -2,7 +2,7 @@
 
 <config>
   <app framerate_cap="60">
-    <title>Final Fantasy: Mystery World</title>
+    <title>EasingSplinesResearch</title>
     <organization>UPC</organization>
   </app>
 
@@ -22,9 +22,6 @@
     <folder>maps/</folder>
   </map>
 
-  <UI>
-    <sprite>textures/UI.png</sprite>
-  </UI>
 
 </config>
 
