@@ -49,44 +49,30 @@ bool j1Scene::PreUpdate()
 // Called each loop iteration
 bool j1Scene::Update(float dt)
 {
-
 	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT) {
 		App->render->camera.y += 300 * dt;
 	}
-		
-
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) {
 		App->render->camera.y -= 300 * dt;
 	}
-		
-
 	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT) {
 		App->render->camera.x += 300 * dt;
 	}
-		
-
 	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT) {
 		App->render->camera.x -= 300 * dt;
 	}
-		
-
 
 	/*if (App->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) {
 		App->easing_splines->CreateSpline(&quad.x, quad.x + 800, 3000, TypeSpline::EASE_IN_CIRC);
 	}*/
 
-
 	if (App->input->GetKey(SDL_SCANCODE_F) == KEY_DOWN) {
 		App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 10450, 8000, TypeSpline::EASE_OUT_QUINT);
 	}
 
-
 	App->map->Draw();
 
 	//App->render->DrawQuad(quad, 255, 0, 255);
-
-	
-	
 
 	return true;
 }
