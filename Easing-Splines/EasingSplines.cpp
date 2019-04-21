@@ -52,7 +52,7 @@ bool EasingSplines::CleanUp()
 	return true;
 }
 
-void EasingSplines::CreateSpline(int * position, const int target_position, const float time_to_travel, TypeSpline type)
+void EasingSplines::CreateSpline(int * position, const int &target_position, const float &time_to_travel, const TypeSpline &type)
 {
 	EaseSplineInfo* info = new EaseSplineInfo(position, target_position, time_to_travel, type);
 
@@ -111,17 +111,17 @@ bool EaseSplineInfo::Update(float dt)
 	return ret;
 }
 
-int EaseFunctions::EaseOutQuint(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseOutQuint(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed*time_passed + 1) + initial_position;;
 }
 
-int EaseFunctions::Ease(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::Ease(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return distance_to_travel * (time_passed / time_to_travel) + initial_position;
 }
 
-int EaseFunctions::EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseInOutBack(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	int pos = 0;
 	float s = 1.70158f;
@@ -135,17 +135,17 @@ int EaseFunctions::EaseInOutBack(float time_passed, int initial_position, int di
 	return pos;
 }
 
-int EaseFunctions::EaseOutQuart(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseOutQuart(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return -distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed*time_passed - 1) + initial_position;
 }
 
-int EaseFunctions::EaseInQuad(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseInQuad(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return distance_to_travel * (time_passed /= time_to_travel)*time_passed + initial_position;
 }
 
-int EaseFunctions::EaseInOutExpo(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseInOutExpo(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	int pos = 0;
 
@@ -158,7 +158,7 @@ int EaseFunctions::EaseInOutExpo(float time_passed, int initial_position, int di
 	return pos;
 }
 
-int EaseFunctions::EaseOutElastic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseOutElastic(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	int pos = 0;
 
@@ -171,12 +171,12 @@ int EaseFunctions::EaseOutElastic(float time_passed, int initial_position, int d
 	return pos;
 }
 
-int EaseFunctions::EaseOutCubic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseOutCubic(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return distance_to_travel * ((time_passed = time_passed / time_to_travel - 1)*time_passed*time_passed + 1) + initial_position;
 }
 
-int EaseFunctions::EaseInCirc(float time_passed, int initial_position, int distance_to_travel, float time_to_travel)
+int EaseFunctions::EaseInCirc(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	return -distance_to_travel * (sqrt(1 - (time_passed /= time_to_travel)*time_passed) - 1) + initial_position;
 }

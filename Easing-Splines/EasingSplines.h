@@ -26,15 +26,15 @@ enum class TypeSpline {
 };
 
 struct EaseFunctions {
-	int EaseOutQuint(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int Ease(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseInOutBack(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseOutQuart(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseInQuad(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseInOutExpo(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseOutElastic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseOutCubic(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
-	int EaseInCirc(float time_passed, int initial_position, int distance_to_travel, float time_to_travel);
+	int EaseOutQuint(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int Ease(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseInOutBack(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseOutQuart(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseInQuad(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseInOutExpo(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseOutElastic(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseOutCubic(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
+	int EaseInCirc(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel);
 };
 
 struct EaseSplineInfo {
@@ -51,7 +51,7 @@ struct EaseSplineInfo {
 
 	bool Update(float dt);
 
-	EaseSplineInfo(int * position, const int target_position, const float time_to_travel, TypeSpline type) {
+	EaseSplineInfo(int * position, const int &target_position, const float &time_to_travel, const TypeSpline &type) {
 		this->position = position;
 		this->initial_position = *position;
 		this->distance_to_travel = target_position - *position;
@@ -77,7 +77,7 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void CreateSpline(int * position, int target_position, const float time_to_travel, TypeSpline type);
+	void CreateSpline(int * position, const int &target_position, const float &time_to_travel, const TypeSpline &type);
 
 
 private:
