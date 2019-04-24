@@ -5,7 +5,7 @@ We have some problems when we have to move the camera or some UI because we had 
 
 `App->render->camera.x -= 100*dt;`
 
-And we had to put a condition in order to finish it when we wanted. This might be fine for simple games and simple camera movements, but how we could have done this movement with this system: (the speed decreases with time) 
+And we had to put a condition in order to finish it when we wanted. This might be fine for simple games and simple camera movements, but how could we have done this movement with this system: (the speed decreases with time) 
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-c1046f1efd98.gif)
 
@@ -54,6 +54,9 @@ Using a power that its range is from 1 to 6:
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-c7cb04e8f3eb.gif)
 
+* **Circ:** Power of 6.
+
+![](https://im5.ezgif.com/tmp/ezgif-5-e00218fe7101.gif)
 
 Using differents math methods:
 
