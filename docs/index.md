@@ -1,11 +1,11 @@
 # Easing and splines for cameras and UI
 I am [Oriol Capdevila Salinas](https://www.linkedin.com/in/oriol-capdevila-0a6b3914b/), student of the [Bachelor’s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/). This content is made for the second year’s subject Project 2, under supervision of lecturer [Ricard Pillosu](https://www.linkedin.com/in/ricardpillosu?originalSubdomain=es).
 # Problem & Solution
-We have some problems when we have to move the camera or some UI because we had just one way to do it:
+We have some problems when we have to move the camera or some UI because we just had one way to do it:
 
 `App->render->camera.x -= 100*dt;`
 
-And we had to put a condition in order to finish it when we wanted. This might be fine for simple games and simple camera movements, but how could we have done this movement with this system: (the speed decreases with time) 
+We had to put a condition in order to finish it when we wanted. This might be fine for simple games and simple camera movements, but how could we have done this movement with this system: (the speed decreases with time) 
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-c1046f1efd98.gif)
 
@@ -74,6 +74,28 @@ Each ease function, less the linear, has three different functions:
 * **Ease Out:** Describe the negative acceleration of the element that is being moved.
 * **Ease In Out:** It is a combination of the two movements described above, first Ease In and the Ease Out. 
 
+## Graphic Help of each Function
 
+* **EaseInQuad:**
 
+![](https://i.gyazo.com/9dc5d02e3bd29214bbbc1b9cf630c4d2.png)
 
+* **EaseOutQuad:**
+
+![](https://i.gyazo.com/f4c1dce3ebb72288517a0e53de95bf00.png)
+
+* **EaseInOutQuad:**
+
+![](https://i.gyazo.com/ca4ec06be452ef89fb381e4f0dc7170d.png)
+
+* **EaseInCubic:**
+
+![](https://i.gyazo.com/6cb77e6f3845cb89d4edc187764ef053.png)
+
+* **EaseOutCubic:**
+
+![](https://i.gyazo.com/8fa2fb1b9603140bed9d9a929e7890f5.png)
+
+* **EaseInOutCubic:**
+
+![](https://i.gyazo.com/5c6cdac4aad70af9997dfddf30ffeceb.png)
