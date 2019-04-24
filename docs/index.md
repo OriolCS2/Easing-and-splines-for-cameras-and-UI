@@ -135,3 +135,27 @@ Each ease function, less the linear, has three different functions:
 * **EaseInOutCirc:**
 
 ![](https://i.gyazo.com/fba222d695cb019c58e497fd99744041.png)
+
+* **EaseInExpo:**
+
+![](https://i.gyazo.com/146977a727bacb15269c5802b65646f8.png)
+
+* **EaseOutExpo:**
+
+![](https://i.gyazo.com/7c57851bb9f8c2d2f6cd2fc8b48c9390.png)
+
+* **EaseInOutExpo:**
+
+![](https://i.gyazo.com/ef6fe06c75ce4d1a126e4ad3983a1d7f.png)
+
+* **EaseInBack:**
+
+![](https://i.gyazo.com/968321f2e6a47fa65e03e029f2309896.png)
+
+* **EaseOutBack:**
+
+![](https://i.gyazo.com/a4e188a4f409130b4883a1b19ddfb0e2.png)
+
+* **EaseInOutBack:**
+
+![](https://i.gyazo.com/ad80bc3b6f13a0358805ecd30fcefa94.png)
