@@ -30,3 +30,20 @@ In my code, these parameters have a different name because I think they are more
 * **Final Value (c):** distance_to_travel
 * **Duration (d):** time_to_travel
 
+## Easing Functions Types
+
+* **Linear:** 
+
+![](https://im5.ezgif.com/tmp/ezgif-5-7d44f0548760.gif)
+
+* **Cubic:** 
+
+![](https://im5.ezgif.com/tmp/ezgif-5-14011f8ffa59.gif)
+
+* **Quart:** 
+
+![](https://im5.ezgif.com/tmp/ezgif-5-32b1d8114393.gif)
+
+* **Quint:** 
+
+![](https://im5.ezgif.com/tmp/ezgif-5-c7cb04e8f3eb.gif)
