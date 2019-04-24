@@ -99,3 +99,39 @@ Each ease function, less the linear, has three different functions:
 * **EaseInOutCubic:**
 
 ![](https://i.gyazo.com/5c6cdac4aad70af9997dfddf30ffeceb.png)
+
+* **EaseInQuart:**
+
+![](https://i.gyazo.com/d65a1a144bab00e652cc0b8a4ed291ba.png)
+
+* **EaseOutQuart:**
+
+![](https://i.gyazo.com/326c7c28e74f5f4dbd80f75fcd24d4f0.png)
+
+* **EaseInOutQuart:**
+
+![](https://i.gyazo.com/d3103d81ca39933d721342e6310f54be.png)
+
+* **EaseInQuint:**
+
+![](https://i.gyazo.com/48b969fa1b55001807d00b092466b784.png)
+
+* **EaseOutQuint:**
+
+![](https://i.gyazo.com/41f94cf4f39b093e55544fe9b7cff913.png)
+
+* **EaseInOutQuint:**
+
+![](https://i.gyazo.com/685e697bf802b1757eef22dc13ec5df8.png)
+
+* **EaseInCirc:**
+
+![](https://i.gyazo.com/7e93c2ba14629e87a5b72114953a7c36.png)
+
+* **EaseOutCirc:**
+
+![](https://i.gyazo.com/710f3136db37a72ef454bf14fb7f51a1.png)
+
+* **EaseInOutCirc:**
+
+![](https://i.gyazo.com/fba222d695cb019c58e497fd99744041.png)
