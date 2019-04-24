@@ -202,4 +202,56 @@ Finally, we have our main function to create and add a new spline. This function
 ![](https://i.gyazo.com/9d018749d2912b016a91b306f49528bd.png)
 
 # TODOs
-Click 
+Click [here](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/releases) to download the TODOs. 
+
+## TODO 1
+
+Create the constructor of the struct:
+
+![](https://i.gyazo.com/04136c6c6202186cda24626028492d21.png)
+
+### Solution
+
+![](https://i.gyazo.com/560dc9464133f4bfeb3ff3f48a6c2254.png)
+
+## TODO 2
+
+Calculate the time that has passed since the spline started. Save this value in a float.
+
+![](https://i.gyazo.com/65ccfe4907d86316894798b6e8b59686.png)
+
+### Solution
+
+![](https://i.gyazo.com/665e3005e72522e36246e6c342c289eb.png)
+
+## TODO 3
+
+Think how can we know if a spline has finished or not using the time calculated before. 
+If the splines has finished, Update must end with a false in order to delete it
+
+![](https://i.gyazo.com/27b713abc8b11a3d896465f6f3aabb46.png)
+
+### Solution
+
+![](https://i.gyazo.com/522c944bd8979c042b9f6d7514da0a32.png)
+
+## TODO 4
+
+If the spline has not finished, make a switch with the spline type and call its type function. Look what this function returns! 
+
+![](https://i.gyazo.com/ae3ad3cc63a7c2301c71bf219e0c7eec.png)
+
+### Solution 
+
+![](https://i.gyazo.com/0a9fa4eb0cacbbbefa75694ff2d9ca98.png)
+
+## TODO 5
+
+Look the function CreateSpline() from EasingSplines.cpp, then use it to create one.
+
+![](https://i.gyazo.com/6500e9e32577cade81f5499ab48b1453.png)
+
+### Solution
+
+![](https://i.gyazo.com/1c75fcf0a09e07e471eef33b593611d2.png)
+
