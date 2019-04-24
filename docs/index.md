@@ -60,5 +60,14 @@ Using a power that its range is from 1 to 6:
 
 Using differents math methods:
 
+* **Back:** The object bypass the objective and then returns.
+
+![](https://im5.ezgif.com/tmp/ezgif-5-57d6d18f8bb9.gif)
+
+* **Expo:** Increases/decreases exponentially the initial value.
+
+![](https://im5.ezgif.com/tmp/ezgif-5-b40162c2b221.gif)
+
+
 
 
