@@ -29,3 +29,7 @@ Link to the [reposiroty](https://github.com/OriolCS2/Easing-and-splines-for-came
 **Oriol Capdevila Salinas**
   * [GitHub Account](https://github.com/OriolCS2/)
   * oriolcapdevilas@hotmail.com
+
+# License
+
+This project is licensed under the MIT License - see the [license](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/LICENSE) file for details
