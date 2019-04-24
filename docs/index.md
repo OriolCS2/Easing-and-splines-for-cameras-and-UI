@@ -15,3 +15,10 @@ It is not a difficult movement, but with our old system, this must have been har
 
 # Introduction to Splines
 In mathematics, a spline is a piecewise function defined by polynomials. This functions are usually used in programming because of the simplicity of their construction, their ease and accuracy of evaluation.  
+## Easing Functions 
+These functions as its name says, are simplified functions that help to resolve difficult functions and their result is really accurated. These will give us the chance to use splines with a really easy method. They depend on four parameters:
+
+* **Current Time (t):** Time that has passed since the spline started. 
+* **Initial Value (b):** In our case, the initial position of the element that we want to move.
+* **Final Value (c):** In our case, the final position we want to have our element at the end of the spline.
+* **Duration (d):** The time we want to complete the spline.
