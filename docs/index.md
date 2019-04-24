@@ -58,7 +58,7 @@ Using a power that its range is from 1 to 6:
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-e00218fe7101.gif)
 
-Using differents math methods:
+Some others that use differents math methods:
 
 * **Back:** The object bypass the objective and then returns.
 
@@ -67,6 +67,12 @@ Using differents math methods:
 * **Expo:** Increases/decreases exponentially the initial value.
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-b40162c2b221.gif)
+
+Each ease function, less the linear, has three different functions:
+
+* **Ease In:** Describe the positive acceleration of the element that is being moved.
+* **Ease Out:** Describe the negative acceleration of the element that is being moved.
+* **Ease In Out:** It is a combination of the two movements described above, first Ease In and the Ease Out. 
 
 
 
