@@ -159,3 +159,45 @@ Each ease function, less the linear, has three different functions:
 * **EaseInOutBack:**
 
 ![](https://i.gyazo.com/ad80bc3b6f13a0358805ecd30fcefa94.png)
+
+
+# Introduction to the code
+
+In order to achieve my goal, I create a new module called EasingSplines. This module will manage all splines created.
+
+Let's see its core code.
+
+
+First of all, it has a struct called EaseSplineInfo, this struct contains all the variables that are needed to have a spline:
+
+* **int * position:** A pointer to the position of the element we want to move, thanks to that, we can change that value because we have the adress.
+* **int initial_position:** The initial value of the element.
+* **int distance_to_travel:** The distance we want to travel.
+* **float time_to_travel:** The time we want to do the spline requested.
+* **float time_started:** The time when the spline started.
+* **TypeSpline type:** The type of spline is it.
+* **EaseFunctions ease_function:** A variable to a struct that contains all the spline functions.
+* **bool Update(float dt):** Function in which the spline makes its update.
+
+![](https://i.gyazo.com/019959c027b3ef39920dd4b0f3df4269.png)
+
+Then, we have a struct that has all the easing functions in order to have all them in the same site.
+
+![](https://i.gyazo.com/ff28bfd5167b023514f1474723de7096.png)
+
+We have an enum of all the spline type that areable to be used:
+
+![](https://i.gyazo.com/ee7dca1a740b7211cab2bfcc5855cd55.png)
+
+Our module has a list with all the splines created that have not finished.
+
+![](https://i.gyazo.com/7d454f80262ae758723d7e492f04e91a.png)
+
+In the Update of the module, we use this list to call each Update of our splines. When a spline has finished, it returns false so we must delete it.
+
+![](https://i.gyazo.com/f56f3a30a546747c15614bef82546b68.png)
+
+Finally, we have our main function to create and add a new spline. This function needs 4 parameters (pointer to the value, the target value, the time to achive target value and the type of spline we want to use). 
+
+![](https://i.gyazo.com/9d018749d2912b016a91b306f49528bd.png)
+
