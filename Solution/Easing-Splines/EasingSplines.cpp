@@ -68,10 +68,15 @@ void EasingSplines::CreateSpline(int * position, const int &target_position, con
 bool EaseSplineInfo::Update(float dt)
 {
 	bool ret = true;
-
+	
+	// TODO 2: Calculate the time that has passed since the spline started. Save this value in a float. 1 line
 	float time_passed = SDL_GetTicks() - time_started;
 
+	// TODO 3: Think how can we know if a spline has finished or not using the time calculated before. 
+	// If the splines has finished, Update must end with a false in order to delete it, look line 21. 
 	if (time_passed < time_to_travel) {
+		// TODO 4: If the spline has not finished, make a switch with the spline type and call its type function. Look what this function returns! 
+		// Make this for 1 case just to test, choose the spline you want.
 		switch (type) {
 		case TypeSpline::EASE: {
 			*position = ease_function.Ease(time_passed, initial_position, distance_to_travel, time_to_travel);

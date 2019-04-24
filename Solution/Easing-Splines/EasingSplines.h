@@ -52,6 +52,7 @@ struct EaseSplineInfo {
 	bool Update(float dt);
 
 	EaseSplineInfo(int * position, const int &target_position, const float &time_to_travel, const TypeSpline &type) {
+		// TODO 1: Create the constructor, 6 lines are needed
 		this->position = position;
 		this->initial_position = *position;
 		this->distance_to_travel = target_position - *position;
@@ -59,7 +60,6 @@ struct EaseSplineInfo {
 		this->time_to_travel = time_to_travel;
 		time_started = SDL_GetTicks();
 	}
-
 };
 
 class EasingSplines : public j1Module
