@@ -255,3 +255,14 @@ Look the function CreateSpline() from EasingSplines.cpp, then use it to create o
 
 ![](https://i.gyazo.com/1c75fcf0a09e07e471eef33b593611d2.png)
 
+# Improvements
+
+* With this system, if we wanted to move the camera in X and Y at the same time we must create 2 splines. So it would be a great improvement to make it allow two values.
+* Splines work with float, so we lose precision because the system works with int. 
+
+# Author
+
+**Oriol Capdevila Salinas**
+  * [GitHub Account](https://github.com/OriolCS2/)
+  * oriolcapdevilas@hotmail.com
+
