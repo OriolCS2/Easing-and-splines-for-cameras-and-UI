@@ -32,18 +32,30 @@ In my code, these parameters have a different name because I think they are more
 
 ## Easing Functions Types
 
-* **Linear:** 
+Using a power that its range is from 1 to 6:
+
+* **Linear:** Power of 1.
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-7d44f0548760.gif)
 
-* **Cubic:** 
+* **Quad:** Power of 2.
+
+![](https://im5.ezgif.com/tmp/ezgif-5-12148db323ec.gif)
+
+* **Cubic:** Power of 3.
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-14011f8ffa59.gif)
 
-* **Quart:** 
+* **Quart:** Power of 4.
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-32b1d8114393.gif)
 
-* **Quint:** 
+* **Quint:** Power of 5.
 
 ![](https://im5.ezgif.com/tmp/ezgif-5-c7cb04e8f3eb.gif)
+
+
+Using differents math methods:
+
+
+
