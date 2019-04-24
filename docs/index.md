@@ -202,7 +202,8 @@ Finally, we have our main function to create and add a new spline. This function
 ![](https://i.gyazo.com/9d018749d2912b016a91b306f49528bd.png)
 
 # TODOs
-Click [here](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/releases) to download the TODOs. 
+Click [here](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/releases/tag/1.0) to download the TODOs. 
+Click [here](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/releases/tag/0.0) to download the full code.
 
 ## TODO 1
 
