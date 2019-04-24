@@ -22,3 +22,11 @@ These functions as its name says, are simplified functions that help to resolve 
 * **Initial Value (b):** In our case, the initial position of the element that we want to move.
 * **Final Value (c):** In our case, the final position we want to have our element at the end of the spline.
 * **Duration (d):** The time we want to complete the spline.
+
+In my code, these parameters have a different name because I think they are more readable:
+
+* **Current Time (t):** time_passed
+* **Initial Value (b):** initial_position
+* **Final Value (c):** distance_to_travel
+* **Duration (d):** time_to_travel
+
