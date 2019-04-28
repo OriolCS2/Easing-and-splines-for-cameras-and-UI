@@ -3,8 +3,10 @@ I am [Oriol Capdevila Salinas](https://www.linkedin.com/in/oriol-capdevila-0a6b3
 
 # About the project
 This project contains a simple 2D map and a system of Easing Splines to move Camera, UI elements or whatever value you want. 
+
 Link to the [web](https://oriolcs2.github.io/Easing-and-splines-for-cameras-and-UI/)
-Link to the [reposiroty](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/)
+
+Link to the [repository](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/)
 
 # Installing
 * Download the last release
