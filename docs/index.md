@@ -181,27 +181,27 @@ First of all, it has a struct called EaseSplineInfo, this struct contains all th
 * **EaseFunctions ease_function:** A variable to a struct that contains all the spline functions.
 * **bool Update(float dt):** Function in which the spline makes its update.
 
-![](https://i.gyazo.com/019959c027b3ef39920dd4b0f3df4269.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/structspline.png?raw=true)
 
 Then, we have a struct that has all the easing functions in order to have all them in the same site.
 
-![](https://i.gyazo.com/ff28bfd5167b023514f1474723de7096.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/structsplinefunctions.png?raw=true)
 
 We have an enum of all the spline type that areable to be used:
 
-![](https://i.gyazo.com/ee7dca1a740b7211cab2bfcc5855cd55.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/enumsplines.png?raw=true)
 
 Our module has a list with all the splines created that have not finished.
 
-![](https://i.gyazo.com/7d454f80262ae758723d7e492f04e91a.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/listsplines.png?raw=true)
 
 In the Update of the module, we use this list to call each Update of our splines. When a spline has finished, it returns false so we must delete it.
 
-![](https://i.gyazo.com/f56f3a30a546747c15614bef82546b68.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/updatemodule.png?raw=true)
 
 Finally, we have our main function to create and add a new spline. This function needs 4 parameters (pointer to the value, the target value, the time to achive target value and the type of spline we want to use). 
 
-![](https://i.gyazo.com/9d018749d2912b016a91b306f49528bd.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/createspline.png?raw=true)
 
 # TODOs
 
@@ -213,52 +213,52 @@ Click [here](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/r
 
 Create the constructor of the struct:
 
-![](https://i.gyazo.com/04136c6c6202186cda24626028492d21.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo1.png?raw=true)
 
 ### Solution
 
-![](https://i.gyazo.com/560dc9464133f4bfeb3ff3f48a6c2254.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo1solution.png?raw=true)
 
 ## TODO 2
 
 Calculate the time that has passed since the spline started. Save this value in a float.
 
-![](https://i.gyazo.com/65ccfe4907d86316894798b6e8b59686.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo2.png?raw=true)
 
 ### Solution
 
-![](https://i.gyazo.com/665e3005e72522e36246e6c342c289eb.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo2solution.png?raw=true)
 
 ## TODO 3
 
 Think how can we know if a spline has finished or not using the time calculated before. 
 If the splines has finished, Update must end with a false in order to delete it
 
-![](https://i.gyazo.com/27b713abc8b11a3d896465f6f3aabb46.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo3.png?raw=true)
 
 ### Solution
 
-![](https://i.gyazo.com/522c944bd8979c042b9f6d7514da0a32.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo3solution.png?raw=true)
 
 ## TODO 4
 
 If the spline has not finished, make a switch with the spline type and call its type function. Look what this function returns! 
 
-![](https://i.gyazo.com/ae3ad3cc63a7c2301c71bf219e0c7eec.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo4.png?raw=true)
 
 ### Solution 
 
-![](https://i.gyazo.com/0a9fa4eb0cacbbbefa75694ff2d9ca98.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo4solution.png?raw=true)
 
 ## TODO 5
 
 Look the function CreateSpline() from EasingSplines.cpp, then use it to create one.
 
-![](https://i.gyazo.com/6500e9e32577cade81f5499ab48b1453.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo5.png?raw=true)
 
 ### Solution
 
-![](https://i.gyazo.com/1c75fcf0a09e07e471eef33b593611d2.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/todo5solution.png?raw=true)
 
 # Improvements
 
