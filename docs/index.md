@@ -13,7 +13,7 @@ We had to put a condition in order to finish it when we wanted. This might be fi
 
 It is not a difficult movement, but with our old system, this must have been hardcoded. So, my objective is that to make this movement and far more with just calling a function once, let's start.
 
-![](https://i.gyazo.com/cbe1999d34d513cb9b89c1823d0b2a61.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/cbe1999d34d513cb9b89c1823d0b2a61.png?raw=true)
 
 # Introduction to Splines
 In mathematics, a spline is a piecewise function defined by polynomials. This functions are usually used in programming because of the simplicity of their construction, their ease and accuracy of evaluation.  
@@ -80,87 +80,87 @@ Each ease function, less the linear, has three different functions:
 
 * **EaseInQuad:**
 
-![](https://i.gyazo.com/9dc5d02e3bd29214bbbc1b9cf630c4d2.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinquad.png?raw=true)
 
 * **EaseOutQuad:**
 
-![](https://i.gyazo.com/f4c1dce3ebb72288517a0e53de95bf00.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeOutQUad.png?raw=true)
 
 * **EaseInOutQuad:**
 
-![](https://i.gyazo.com/ca4ec06be452ef89fb381e4f0dc7170d.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutQuad.png?raw=true)
 
 * **EaseInCubic:**
 
-![](https://i.gyazo.com/6cb77e6f3845cb89d4edc187764ef053.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeincubic.png?raw=true)
 
 * **EaseOutCubic:**
 
-![](https://i.gyazo.com/8fa2fb1b9603140bed9d9a929e7890f5.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutcubic.png?raw=true)
 
 * **EaseInOutCubic:**
 
-![](https://i.gyazo.com/5c6cdac4aad70af9997dfddf30ffeceb.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutcubic.png?raw=true)
 
 * **EaseInQuart:**
 
-![](https://i.gyazo.com/d65a1a144bab00e652cc0b8a4ed291ba.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinquart.png?raw=true)
 
 * **EaseOutQuart:**
 
-![](https://i.gyazo.com/326c7c28e74f5f4dbd80f75fcd24d4f0.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutquart.png?raw=true)
 
 * **EaseInOutQuart:**
 
-![](https://i.gyazo.com/d3103d81ca39933d721342e6310f54be.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutquart.png?raw=true)
 
 * **EaseInQuint:**
 
-![](https://i.gyazo.com/48b969fa1b55001807d00b092466b784.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinquint.png?raw=true)
 
 * **EaseOutQuint:**
 
-![](https://i.gyazo.com/41f94cf4f39b093e55544fe9b7cff913.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutquint.png?raw=true)
 
 * **EaseInOutQuint:**
 
-![](https://i.gyazo.com/685e697bf802b1757eef22dc13ec5df8.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutquint.png?raw=true)
 
 * **EaseInCirc:**
 
-![](https://i.gyazo.com/7e93c2ba14629e87a5b72114953a7c36.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeincirc.png?raw=true)
 
 * **EaseOutCirc:**
 
-![](https://i.gyazo.com/710f3136db37a72ef454bf14fb7f51a1.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutcirc.png?raw=true)
 
 * **EaseInOutCirc:**
 
-![](https://i.gyazo.com/fba222d695cb019c58e497fd99744041.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutcirc.png?raw=true)
 
 * **EaseInExpo:**
 
-![](https://i.gyazo.com/146977a727bacb15269c5802b65646f8.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinexpo.png?raw=true)
 
 * **EaseOutExpo:**
 
-![](https://i.gyazo.com/7c57851bb9f8c2d2f6cd2fc8b48c9390.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutexpo.png?raw=true)
 
 * **EaseInOutExpo:**
 
-![](https://i.gyazo.com/ef6fe06c75ce4d1a126e4ad3983a1d7f.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutexpo.png?raw=true)
 
 * **EaseInBack:**
 
-![](https://i.gyazo.com/968321f2e6a47fa65e03e029f2309896.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinback.png?raw=true)
 
 * **EaseOutBack:**
 
-![](https://i.gyazo.com/a4e188a4f409130b4883a1b19ddfb0e2.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeoutback.png?raw=true)
 
 * **EaseInOutBack:**
 
-![](https://i.gyazo.com/ad80bc3b6f13a0358805ecd30fcefa94.png)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/images/easeinoutback.png?raw=true)
 
 
 # Introduction to the code
