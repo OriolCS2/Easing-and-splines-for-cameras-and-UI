@@ -129,13 +129,13 @@ int EaseFunctions::Ease(float &time_passed, const int &initial_position, const i
 int EaseFunctions::EaseInOutBack(float &time_passed, const int &initial_position, const int &distance_to_travel, const float &time_to_travel)
 {
 	int pos = 0;
-	float s = 1.70158f;
+	float s = 0.70158f;
 	if ((time_passed /= time_to_travel / 2) < 1) {
-		pos = distance_to_travel / 2 * (time_passed*time_passed*(((s *= (1.525f)) + 1)*time_passed - s)) + initial_position;
+		pos = distance_to_travel / 2 * (time_passed*time_passed*(((s *= (0.525f)) + 1)*time_passed - s)) + initial_position;
 	}
 	else {
 		float postFix = time_passed -= 2;
-		pos = distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (1.525f)) + 1)*time_passed + s) + 2) + initial_position;
+		pos = distance_to_travel / 2 * ((postFix)*time_passed*(((s *= (0.525f)) + 1)*time_passed + s) + 2) + initial_position;
 	}
 	return pos;
 }
