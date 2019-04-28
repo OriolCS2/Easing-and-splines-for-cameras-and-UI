@@ -38,7 +38,7 @@ Using a power that its range is from 1 to 6:
 
 * **Linear:** Power of 1.
 
-![](https://user-images.githubusercontent.com/36154523/56868484-3e051280-69f3-11e9-8895-d5ab2c627dff.gif)
+<img src="https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/linear.gif?raw=true" width="500"/>
 
 * **Quad:** Power of 2.
 
