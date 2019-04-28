@@ -9,7 +9,7 @@ We have some problems when we have to move the camera or some UI because we just
 
 We had to put a condition in order to finish it when we wanted. This might be fine for simple games and simple camera movements, but how could we have done this movement with this system: (the speed decreases with time) 
 
-![](https://im5.ezgif.com/tmp/ezgif-5-c1046f1efd98.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/cubic.gif)
 
 It is not a difficult movement, but with our old system, this must have been hardcoded. So, my objective is that to make this movement and far more with just calling a function once, let's start.
 
@@ -38,37 +38,37 @@ Using a power that its range is from 1 to 6:
 
 * **Linear:** Power of 1.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-7d44f0548760.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/linear.gif)
 
 * **Quad:** Power of 2.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-12148db323ec.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/quad.gif)
 
 * **Cubic:** Power of 3.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-14011f8ffa59.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/cubic.gif)
 
 * **Quart:** Power of 4.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-32b1d8114393.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/quart.gif)
 
 * **Quint:** Power of 5.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-c7cb04e8f3eb.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/quint.gif)
 
 * **Circ:** Power of 6.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-e00218fe7101.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/circ.gif)
 
 Some others that use differents math methods:
 
 * **Back:** The object bypass the objective and then returns.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-57d6d18f8bb9.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/back.gif)
 
 * **Expo:** Increases/decreases exponentially the initial value.
 
-![](https://im5.ezgif.com/tmp/ezgif-5-b40162c2b221.gif)
+![](https://github.com/OriolCS2/Easing-and-splines-for-cameras-and-UI/blob/master/docs/gifs/expo.gif)
 
 Each ease function, less the linear, has three different functions:
 
